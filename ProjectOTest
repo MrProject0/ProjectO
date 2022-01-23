@@ -1,0 +1,164 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local venyx = library.new("Project O | Premium", 5013109572)
+
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+-- first page
+local page = venyx:addPage("Home", 5012544693)
+-----------------------------------------------------
+local page = venyx:addPage("Main | Player", 5012544693)
+local section1 = page:addSection("Main")
+section1:addButton("Fly [ X ]", function()
+print("Clicked")
+end)
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Click Teleport"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+---
+section1:addButton("Noclip [ E ]", function()
+print("Clicked")
+end)
+local s = loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxScripts52/noclip/main/noclip.lua"), true))()
+print(s)
+---
+section1:addButton("Click To Teleport", function()
+print("Clicked")
+end)
+---
+section1:addButton("???", function()
+print("Clicked")
+end)
+----
+local section1 = page:addSection("Player")
+section1:addButton("Headless", function()
+print("Clicked")
+end)
+----
+section1:addButton("Left Korblox", function()
+print("Clicked")
+end)
+----
+section1:addButton("Right Korblox", function()
+print("Clicked")
+end)
+----
+section1:addButton("Fake Macro", function()
+print("Clicked")
+end)
+---------------------------------------------------
+local page = venyx:addPage("Toggles", 5012544693)
+local section1 = page:addSection("Main Togggles")
+section1:addToggle("Auto-Block", nil, function(value)
+print("Toggled", value)
+end)
+----
+section1:addToggle("Cash-Aura", nil, function(value)
+print("Toggled", value)
+end)
+-----
+section1:addToggle("Hide-Block", nil, function(value)
+end)
+----
+section1:addToggle("Anti-Stomp", nil, function(value)
+print("Toggled", value)
+end)
+----
+section1:addToggle("Anti-Arrest", nil, function(value)
+print("Toggled", value)
+end)
+----
+section1:addToggle("Auto Drop", nil, function(value)
+print("Toggled", value)
+end)
+----
+section1:addToggle("Hide User", nil, function(value)
+print("Toggled", value)
+end)
+----
+section1:addToggle("Anti-Bag", nil, function(value)
+print("Toggled", value)
+end)
+----
+section1:addToggle("Alt Armor", nil, function(value)
+print("Toggled", value)
+end)
+-----
+section1:addToggle("Rocket Ride", nil, function(value)
+print("Toggled", value)
+end)
+-----
+section1:addToggle("Anti-Grab", nil, function(value)
+print("Toggled", value)
+end)
+-----
+section1:addToggle("Anti-Effects", nil, function(value)
+print("Toggled", value)
+end)
+-----
+section1:addToggle("Reach", nil, function(value)
+print("Toggled", value)
+end)
+---------------------------------------------------
+local page = venyx:addPage("Combat", 5012544693)
+local section1 = page:addSection("Combat")
+section1:addButton("Kill Aura", function()
+print("Clicked")
+end)
+----
+section1:addButton("Reach", function()
+print("Clicked")
+end)
+---------------------------------------------------
+local page = venyx:addPage("Quick Buy", 5012544693)
+---------------------------------------------------
+local page = venyx:addPage("Quick TP", 5012544693)
+local section1 = page:addSection("Main Teleports")
+section1:addButton("Bank", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-425.948456, 39.6983376, -284.244873, -1.78813934e-06, 0.00268570846, 0.999996424, 2.44472176e-09, 0.999996364, -0.00268570846, -1, -2.44472176e-09, -1.78813934e-06)
+end)
+---
+section1:addButton("Gunshop 1#", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-572.190674, 16.3147411, -736.202698, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+end)
+---
+section1:addButton("Gunshop 2#", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(481.65802, 56.0704613, -614.040466, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+---
+section1:addButton("Hood Kicks", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-195.87355, 38.9532356, -410.253052, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+---------------------------------------------------
+local page = venyx:addPage("God Stuff", 5012544693)
+---------------------------------------------------
+local page = venyx:addPage("Funstuff", 5012544693)
+---------------------------------------------------
+local page = venyx:addPage("Commands", 5012544693)
+---------------------------------------------------
+local page = venyx:addPage("Credits", 5012544693)
+local section1 = page:addSection("Credits:")
+local section1 = page:addSection("Creator | Founder:")
+local section1 = page:addSection("Mr. Project#7636")
+local section1 = page:addSection("Scripter:")
+local section1 = page:addSection("cenore#0932")
+local section1 = page:addSection("Testers:")
+local section1 = page:addSection("Trxplayz#5705")
+local section1 = page:addSection("OblmAsta#7506")
+---------------------------------------------------
+
+
